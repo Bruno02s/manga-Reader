@@ -1,4 +1,5 @@
-import { Component, ViewEncapsulation } from '@angular/core';
+// import { Component, ViewEncapsulation } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, ViewChild, ViewEncapsulation } from '@angular/core';
 
 export interface Tile {
   color: string;
@@ -25,11 +26,27 @@ export class AppComponent {
     {text: 'Two', cols: 1, rows: 1, color: '', style: 'border:  solid 0.3vh #000; z-index: 1; margin-top: 0.7vh;', image: this.hihi},
     {text: 'Three', cols: 1, rows: 1, color: '', style: 'border-top: solid 0.3vh #D3D3D3; border-bottom: solid 0.3vh #D3D3D3; margin-top: 0.7vh;', image: ''}
   ];
+
+
+
+  audioPath = 'assets/sounds/ysr.mp3';
+  @ViewChild('audio')
+  audio!: ElementRef;
+  @ViewChild('options')
+  text!: ElementRef;
+  @ViewChild('button')
+  btn!: ElementRef;
+
+ngAfterViewInit(): void {
+  this.audio.nativeElement.play();
+  this.text.nativeElement.innerHTML = `autoplay: ${
+    this.audio.nativeElement.autoplay ? 'on' : 'off'
+  } loop: ${this.audio.nativeElement.loop} muted: ${
+    this.audio.nativeElement.muted
+  }`;
+
+  this.btn.nativeElement.click();
+  this.audio.nativeElement.play();
 }
 
-window.onload = function playAudio(){
-  let audio = new Audio();
-  audio.src = "../assets/sounds/ysr.mp3";
-  audio.load();
-  audio.play();
 }
