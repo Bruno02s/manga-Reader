@@ -37,16 +37,16 @@ export class AppComponent {
   @ViewChild('button')
   btn!: ElementRef;
 
-ngAfterViewInit(): void {
-  this.audio.nativeElement.play();
-  this.text.nativeElement.innerHTML = `autoplay: ${
-    this.audio.nativeElement.autoplay ? 'on' : 'off'
-  } loop: ${this.audio.nativeElement.loop} muted: ${
-    this.audio.nativeElement.muted
-  }`;
+  ngAfterViewInit(): void {
+    this.audio.nativeElement.play();
+    this.text.nativeElement.innerHTML = `autoplay: ${
+      this.audio.nativeElement.autoplay ? 'on' : 'off'
+    } loop: ${this.audio.nativeElement.loop} muted: ${
+      this.audio.nativeElement.muted
+    }`;
 
-  this.btn.nativeElement.click();
-  this.audio.nativeElement.play();
-}
+    this.btn.nativeElement.click();
+    this.audio.nativeElement.play();
+  }
 
 }
