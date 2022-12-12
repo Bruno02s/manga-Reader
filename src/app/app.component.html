@@ -12,13 +12,6 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-<iframe type="audio/mp3" allow="autoplay" style="display: none" src="assets/sounds/ysr.mp3" oncanplay="this.play()" onloadedmetadata="this.muted = false">
-</iframe>
-
-<!-- <audio autoplay loop #audio>
+<audio autoplay loop #audio oncanplay="this.play()" onloadedmetadata="this.muted = false">
   <source [src]="audioPath" type="audio/mp3">
-</audio> -->
-
-<p #options></p>
-
-<button #button style="visibility: hidden"></button>
+</audio>
