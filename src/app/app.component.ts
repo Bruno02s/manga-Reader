@@ -28,46 +28,9 @@ export class AppComponent {
 
 }
 
-// navigator.mediaDevices.getUserMedia(constraints).then(
-// function(stream) {
-//     /* use the stream */ 
-// }).catch(
-// function(err) { 
-//     /* handle the error */ 
-// });
-
-// navigator.mediaDevices.getUserMedia (
-//   // constraints
-//   {
-//     audio: true, video: false
-//   },
-
-//   // successCallback
-//   // function(localMediaStream) {
-//   //    var video = document.querySelector('video');
-//   //    video.src = window.URL.createObjectURL(localMediaStream);
-//   //    video.onloadedmetadata = function(e) {
-//   //       // Do something with the video here.
-//   //    };
-//   // },
-
-//   // // errorCallback
-//   // function(err) {
-//   //  if(err === PERMISSION_DENIED) {
-//   //    // Explain why you need permission and how to update the permission setting
-//   //  }
-//   // }
-// );
-
-// (async () => {
-//   let audio = new Audio();
-//   audio.srcObject = await navigator.mediaDevices.getUserMedia({audio: true, video: false});
-//   audio.play();
-// })();
-function playAudio(){
+window.onload = function playAudio(){
   let audio = new Audio();
   audio.src = "../assets/sounds/ysr.mp3";
   audio.load();
   audio.play();
 }
-playAudio();
