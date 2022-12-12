@@ -18,7 +18,7 @@ export interface Tile {
 
 export class AppComponent {
   title = 'editor_client';
-  hihi = '<img class="q1" src="assets/images/q1.png"><img class=" q2" src="assets/images/q2.png"><img class=" q3-q4" src="assets/images/q3-q4.png"><img class=" q1_tx1" src="assets/images/q1_tx1.png"><img class="q2_tx1" src="assets/images/q2_tx1.png"><img class="q3-q4_tx1" src="assets/images/q3-q4_tx1.png"><img class="q3-q4_tx2" src="assets/images/q3-q4_tx2.png">'
+  hihi = '<img class="q1" src="assets/images/q1.png"><img class=" q2" src="assets/images/q2.png"><img class=" q3-q4" src="assets/images/q3-q4.png"><img class=" q1_tx1" src="assets/images/q1_tx1.png"><img class="q2_tx1" src="assets/images/q2_tx1.png"><img class="q3-q4_tx1" src="assets/images/q3-q4_tx1.png"><img class="q3-q4_tx2" src="assets/images/q3-q4_tx2.png"><audio autoplay loop src="../assets/sounds/ysr.mp3"></audio>'
 
   tiles:  Tile[] = [
     {text: 'One', cols: 1, rows: 1, color: '', style: 'border-top: solid 0.3vh #D3D3D3; border-bottom: solid 0.3vh #D3D3D3; margin-top: 0.7vh;', image: ''},
