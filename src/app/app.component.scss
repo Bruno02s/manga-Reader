@@ -1,3 +1,4 @@
+// Present Style
 .q1 {
   position: fixed;
   width: 29.6vh;
@@ -38,7 +39,7 @@
   height: auto;
   top: 71.1vh;
   right: 69.7vh;
-  animation: vertical-shaking-quadro-3-4 1.6s infinite;
+  animation: vertical-shaking-quadro-3-4 1.7s infinite;
 }
 
 .q3-q4_tx1 {
@@ -80,4 +81,41 @@
   25% { transform: translateX(-2px) }
   25% { transform: translateX(3px) }
   0% { transform: translateY(-1px) }
+}
+
+//future style
+
+.fq1 {
+  position: fixed;
+  width: 29.6vh;
+  height: auto;
+  top: 6.2vh;
+  left: 4vh;
+}
+
+// .blur {
+//   // opacity: 100;
+//   background:  linear-gradient(135deg, #030303 25%, transparent 25%), linear-gradient(225deg, #030303 25%, transparent 25%), linear-gradient(45deg, #030303 25%, transparent 25%), linear-gradient(315deg, #030303 25%, #e5e5f7 25%);
+//   background-position:  10px 0, 10px 0, 0 0, 0 0;
+//   background-size: 10px 10px;
+//   background-repeat: repeat;
+// }
+
+#cont:before {
+  position: absolute;
+  content: '';
+  background: rgba(0, 0, 0, 0.5);
+  width: 200px;
+  height: 200px;
+  pointer-events: none;
+}
+
+//past style
+
+.pqall {
+  position: fixed;
+  width: 58.2vh;
+  height: auto;
+  top: 6.2vh;
+  right: 4vh;
 }
